@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UkesOppgave1</title>
+    <style>
+        div {
+            color: blue;
+            background-color: #606060;
+            border: solid black 2px;
+            width: 300px;
+            height: 300px;
+            float: left;
+        }
+        div#FirstOnLine {
+            clear: left;
+        }
+        .Rute1 {
+            background-color: #ffffff;
+            font-size: 21px;
+            text-align: center;
+        }
+        .Rute2 {
+            background-color: #c0c0c0;
+            font-size: 21px;
+            text-align: center;
+        }
+        .Rute3 {
+            background-color: #909090;
+            font-size: 21px;
+            text-align: center;
+        }
+        .Rute4 {
+            background-color: #757575;
+            font-size: 21px;
+            text-align: center;
+        }
+        .Rute5 {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 150%;
+            text-align: center;
+        }
+        .Rute6 {
+            background-color: #d7883e;
+            font-size: 21px;
+            text-align: center;
+        }
+        .Rute7 {
+            background-color: #ffffff;
+        }
+        .Rute8 {
+            background-color: #ffffff;
+        }
+        .Rute9 {
+            background-color: #000000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Rute1" id="FirstOnLine">
+        <a href="Del1.html">Del1</a></div>
+    <div class="Rute2">
+        <a href="Del2.html">Del2</a></div>
+    <div class="Rute3">
+        <a href="Del3.html">Del3</a></div>
+    <div class="Rute4" id="FirstOnLine">
+        <a href="Del4.html">Del4</a></div>
+    <div class="Rute5" id="Rute5" onclick="ChangeColor()">
+        <p>Team 1 er best</p>
+        <a href="rute5.html">Tilbake</a></div>
+    <div class="Rute6">
+        <a title="(Let Me Google That For You)" href="https://bfy.tw/QxdU">Google søk</a></div>
+    <div class="Rute7" id="FirstOnLine">
+        <a title="(GitHub)" href="https://github.com">
+        <img src="GitHub1.png" alt="GitHub" width="300"></a></div>
+    <div class="Rute8">
+        <a title="(Moodle Cloud)" href="https://getacademy.moodlecloud.com">
+            <img src="MoodleCloud1.png" alt="MoodleCloud" width="300"></a></div>
+    <div class="Rute9">
+        <a title="(Get Academy)" href="https://www.getacademy.no">
+            <img src="GetAcademy1.jpg" alt="GetAcademy" width="300"></a></div>
+    <script>
+        var RandColor="";
+        var RedValue;
+        var GreenValue;
+        var BlueValue;
+        function ChangeColor() {
+            RandomColor();
+            document.getElementById("Rute5").style.backgroundColor=RandColor;
+        }
+        function RandomColor() {
+              //RandColor = rgb(255 255 255)
+            RedValue=Math.floor(Math.random()*255);
+            GreenValue=Math.floor(Math.random()*255);
+            BlueValue=Math.floor(Math.random()*255);
+            RandColor="rgb("+RedValue+","+GreenValue+","+BlueValue+")";
+            //RandColor=`rgb(${RedValue},${GreenValue},${BlueValue})`;
+        }
+    </script>
+</body>
+
+</html>

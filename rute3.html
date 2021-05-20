@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            color: blue;
+            
+            border: solid black 2px;
+            width: 300px;
+            height: 300px;
+            float: left;
+        }
+        div#FirstOnLine {
+            clear: left;
+        }
+        .Rute1 {
+            background-color: chartreuse;
+            background-image: url("https://upload.wikimedia.org/wikipedia/en/thumb/a/aa/Hulk_%28circa_2019%29.png/250px-Hulk_%28circa_2019%29.png");
+            background-repeat: no-repeat;
+            background-size: cover;  
+        }
+        .Rute2 {
+            background-color:red;
+            background-image: url("https://i.pinimg.com/originals/c0/f1/59/c0f15909260a3ccc811c8052f5bcdb19.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        .Rute3 {
+            background-image: url("https://www.sultanmarked.no/wp-content/uploads/TINE-Norvegia-ost-500g.jpg");
+            background-repeat: no-repeat;
+            background-size: contain;  
+        }
+        .Rute4 {
+            background-image: url("https://www.icegif.com/wp-content/uploads/tom-and-jerry-icegif-13.gif");
+            background-repeat: no-repeat;
+            background-color: darkslategrey;
+            background-size: contain;           
+        }
+        .Rute5 {
+            font-style:italic;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 150%;
+            text-align: center;
+        }
+        .Rute6 {
+            background-color: green;
+            background-image: url("https://www.pinclipart.com/picdir/big/523-5235097_cactus-clipart-cactus-png-download.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position-x: 30px;
+        }
+        .Rute7 {
+            background-color: aqua;
+            background-image: url("https://res.cloudinary.com/sonic-drive-in/image/upload/c_fit,w_600,h_600,dpr_2,f_auto,q_auto/v1603472634/oa_menu/products/menuproduct-Blue_Raspberry_Slush.png");
+            background-size: contain;
+            background-repeat: no-repeat;  
+            background-position-x: 20px;
+        }
+        .Rute8 {
+            background-color: fuchsia;
+            background-image: url("https://i.imgur.com/FD8Z3w7.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position-x: 30px;
+            background-position-y: 5px;
+        }
+        .Rute9 {
+            background-color: orange;
+            background-image: url("https://res.cloudinary.com/norgesgruppen/image/upload/c_fill,f_auto,h_439,q_auto,w_780/f6f9kll3mebrpmflca9x.png");
+            background-size: contain;
+            background-position: right;
+            background-repeat: no-repeat;  
+        }
+    </style>
+</head>
+<body>
+    <div class="Rute4"id="FirstOnLine"></div>
+    <div class="Rute1"></div>
+    <div class="Rute3"></div>
+    <div class="Rute2" id="FirstOnLine"></div>
+    <div id="Rute5" class="Rute5" onclick="changeColor()"> <a id="link" href="rute5.html">Team 1 lets go</a></div>
+    <div class="Rute6"></div>
+    <div class="Rute7"id="FirstOnLine"></div>
+    <div class="Rute8"></div>
+    <div class="Rute9"></div>
+
+    <script>
+        var randColor = "";
+        var redValue;
+        var greenValue;
+        var blueValue;
+        function changeColor(){
+            randomColor();
+            document.getElementById("Rute5").style.backgroundColor = randColor;
+        }
+        function randomColor(){
+            // randColor = rgb(255,105,180)
+        redValue = Math.floor(Math.random() * 256); 
+        greenValue = Math.floor(Math.random() * 256); 
+        blueValue = Math.floor(Math.random() * 256); 
+        randColor = "rgb(" + redValue +"," + greenValue + "," + blueValue + ")";
+        //  randColor = `rgb(${redValue},${greenValue}, ${blueValue})`;
+        }
+    </script>
+</body>
+</html>
